@@ -53,8 +53,6 @@ public class view_employee extends javax.swing.JInternalFrame {
          
     }
     
-    
-    
     public void IDautoIncrement(){
         try {
             Statement st = Con.createStatement();
@@ -70,22 +68,13 @@ public class view_employee extends javax.swing.JInternalFrame {
             }else{
             
                 long eid = Long.parseLong(rs.getString("MAX(id)").substring(4,rs.getString("MAX(id)").length()));
-                
                 eid++;
-                
                 EMPid.setText("EMP-"+String.format("%05d", eid));
-                
-            }
-            
-             
-     
-        } catch (Exception e) {
+               }
+            } catch (Exception e) {
             }
     }
-    
-    
-    
-    
+   
     public void tableload(){
     
         try {
@@ -97,15 +86,6 @@ public class view_employee extends javax.swing.JInternalFrame {
         }
     }
     
-     
-
-    
-    
-    
-                
-    
-    
-
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -560,9 +540,6 @@ public class view_employee extends javax.swing.JInternalFrame {
 
     private void UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateActionPerformed
   
-         
-        
-        
         int x =  JOptionPane.showConfirmDialog(null,"Do You want to update");
         
         if(x==0)
